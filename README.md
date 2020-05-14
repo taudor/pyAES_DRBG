@@ -17,6 +17,10 @@ Currently supporting Version with No Derivation Function
 - [pyaes](https://github.com/ricmoo/pyaes) >= 1.3.0
 - Python Version > 3
 
+### Installation
 
+To install locally using pip, clone the repository and run
 
-
+```
+$ pip3 install .
+```
