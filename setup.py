@@ -4,10 +4,10 @@ import sys
 from setuptools import setup, find_packages
 
 setup(
-    name="aes_drgb",
+    name="aes_drbg",
     version="0.0.1",
-    description="AES DRGB SP 800-90A, Rev 1 NIST",
-    long_description="AES DRGB SP 800-90A, Rev 1 NIST",
+    description="AES DRBG SP 800-90A, Rev 1 NIST",
+    long_description="AES DRBG SP 800-90A, Rev 1 NIST",
     author="Tudor A. A. Soroceanu",
     author_email="tudor.soroceanu@aisec.fraunhofer.de",
     url="https://github.com/taudor/pyAES_DRBG",
