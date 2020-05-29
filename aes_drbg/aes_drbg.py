@@ -253,3 +253,24 @@ class AES_DRBG(object):
         self.reseed_counter = self.reseed_counter + 1
 
         return returned_bytes
+
+    def generate_hex(self, req_bytes, add_in=b''):
+        ''' Additional Generate Function that returns a hexadecimal string
+            of length req_bytes*2.
+
+            Parameters
+            ----------
+            req_bytes : int
+                       number of bytes requested from the DRBG
+
+            add_in : hex byterray (e.g. \xFF\xF1....etc (len must be less or equal seedlen))
+                    additional input which will be xored with the output of DRBG (optional)
+
+            Returns
+            -------
+            returned_bytes: hex string (e.g. 'FFF1'....etc (len is req_bytes*2))
+                    pseudo-random bytes from DRBG ready to be used in whatever application
+        '''
+        returned_bytes = self.generate(req_bytes, add_in)
+        returned_bytes_hex = ''.join('{:02x}'.format(j) for j in returned_bytes)
+        return returned_bytes_hex
